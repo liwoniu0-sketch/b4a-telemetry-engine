@@ -1,0 +1,13 @@
+---
+applications:
+- name: nex-telemetry-engine
+  memory: 128M
+  disk_quota: 256M
+  instances: 1
+  buildpacks:
+  - nodejs_buildpack
+  command: node server.js
+  env:
+    NODE_ENV: production
+    METRICS_PATH: /v1/telemetry/stream
+    AUTH_KEY: f7bc8576-1150-4292-ad40-48128704a035
